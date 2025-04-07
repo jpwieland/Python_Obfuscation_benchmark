@@ -1,11 +1,11 @@
 
-# 🧪 Benchmark de Ferramentas de Ofuscação de Código Python
+# 🧪 Python Code Obfuscation Benchmark
 
-Este projeto foi desenvolvido como parte do trabalho final do curso de **Engenharia de Computação e Informação da UFRJ**. Ele tem como objetivo avaliar diferentes ferramentas de ofuscação de código Python com base em métricas como desempenho, uso de memória, tempo de inicialização e tamanho final do código.
+This project was developed as the final assignment of the **Computer and Information Engineering program at UFRJ (Federal University of Rio de Janeiro)**. Its goal is to benchmark Python code obfuscation tools by evaluating their impact on performance, memory usage, startup time, and final code size.
 
 ---
 
-## 📌 Visão Geral do Processo
+## 📌 Overview of the Benchmark Process
 
 ```mermaid
 flowchart TD
@@ -71,18 +71,18 @@ flowchart TD
 
 ---
 
-## 🚀 Como Executar
+## 🚀 How to Run
 
-### 1. Clone o repositório
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/seu-usuario/benchmark-python-obfuscation.git
-cd benchmark-python-obfuscation
+git clone https://github.com/your-user/python-obfuscation-benchmark.git
+cd python-obfuscation-benchmark
 ```
 
-### 2. Instale as dependências
+### 2. Install dependencies
 
-Crie um ambiente virtual e instale os requisitos:
+Set up a virtual environment:
 
 ```bash
 python3 -m venv venv
@@ -90,73 +90,73 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-> Algumas ferramentas de ofuscação precisam ser instaladas separadamente (ex: `pip install pyarmor pyminifier cython pyinstaller`)
+> Some tools may need manual installation:  
+`pip install pyarmor pyminifier cython pyinstaller`
 
-### 3. Execute o benchmark
+### 3. Run the benchmark
 
 ```bash
-python benchmark.py --test-files exemplo1.py exemplo2.py -i 10 -o resultados/
+python benchmark.py --test-files example.py -i 10 -o results/
 ```
 
 ---
 
-## ⚙️ Argumentos da Linha de Comando
+## ⚙️ Command-line Options
 
-| Flag | Descrição |
-|------|-----------|
-| `--test-files`, `-t` | Lista de arquivos `.py` a serem testados |
-| `--iterations`, `-i` | Número de execuções por ferramenta (default: 3) |
-| `--output-dir`, `-o` | Caminho do diretório de saída |
-| `--disable-tools` | Ferramentas a serem desabilitadas |
-
----
-
-## 🛠️ Ferramentas Suportadas
-
-- **Original**: Código sem alterações
-- **PyArmor**: Ofuscação avançada de bytecode
-- **Pyminifier**: Minificação e renomeação simples
-- **Cython**: Compilação para C
-- **PyInstaller**: Empacotamento em executável
-- **PyObfuscate**: Renomeação de identificadores
+| Flag | Description |
+|------|-------------|
+| `--test-files`, `-t` | Python source files to be tested |
+| `--iterations`, `-i` | Number of runs per tool (default: 3) |
+| `--output-dir`, `-o` | Directory to save results |
+| `--disable-tools` | Comma-separated list of tools to skip |
 
 ---
 
-## 📂 Estrutura de Saída
+## 🛠️ Supported Tools
 
-O diretório de saída conterá:
-
-- `summary.json`: Métricas agregadas
-- `results.csv`: Tabela de dados
-- `report.html`: Dashboard interativo
-- `chart_*.png`: Gráficos separados por métrica
-- `plot.png`: Gráfico comparativo geral
-- `system_info.csv`: Dados sobre o sistema
+- **Original**: Unmodified code (baseline)
+- **PyArmor**: Advanced bytecode obfuscation
+- **Pyminifier**: Basic minification and identifier obfuscation
+- **Cython**: Code compilation to C
+- **PyInstaller**: Packaging as standalone executables
+- **PyObfuscate**: Obfuscation based on variable renaming
 
 ---
 
-## 📈 Métricas Coletadas
+## 📂 Output Structure
 
-- ⏱️ **execution_time** — tempo de execução
-- ⚡ **startup_time** — tempo de inicialização
-- 💾 **memory_usage** — pico de memória
-- 📏 **code_size** — tamanho final do código
+The benchmark generates the following files:
 
----
-
-## 🤝 Contribuindo
-
-Sinta-se à vontade para abrir issues ou enviar PRs com melhorias, novas ferramentas ou correções. Basta seguir o padrão do dicionário `TOOLS` para adicionar novas estratégias.
+- `summary.json`: Aggregated benchmark results
+- `results.csv`: Tabular data for all runs
+- `chart_*.png`: One chart per evaluated metric
+- `plot.png`: Overview chart
+- `report.html`: Interactive dashboard
+- `system_info.csv`: Environment and system data
 
 ---
 
-## 🧠 Licença
+## 📈 Collected Metrics
 
-Distribuído sob licença MIT.
+- ⏱️ **execution_time** — runtime in seconds
+- ⚡ **startup_time** — time to start the program
+- 💾 **memory_usage** — memory peak in MB
+- 📏 **code_size** — file size after obfuscation (KB)
 
 ---
 
-## 🌎 English Version?
+## 🤝 Contributing
 
-[Click here to see the English README](README_EN.md) — coming soon!
+Feel free to open issues or submit pull requests to improve this benchmark, fix bugs, or add new tools. To add a new tool, define its configuration in the `TOOLS` dictionary in the script.
 
+---
+
+## 🧠 License
+
+Distributed under the MIT License.
+
+---
+
+## 🌐 Versão em Português?
+
+[Leia aqui a versão em Português do README](README.md)

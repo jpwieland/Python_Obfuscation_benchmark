@@ -1,0 +1,17 @@
+# Main benchmark dependencies
+matplotlib>=3.5.0
+numpy>=1.20.0
+psutil>=5.9.0
+
+# Obfuscation tools
+pyarmor==7.7.4  # For pyarmor7
+pyarmor>=8.0.0  # For pyarmor_gen
+pyminifier>=2.1  # For basic minification
+cython>=0.29.24  # For C code compilation
+pyinstaller>=5.1  # For packaging
+
+# Other tools that can be installed via GitHub
+# PyObfuscate and Opy are installed directly from GitHub in the code
+# but included here for documentation
+# git+https://github.com/astrand/pyobfuscate.git  # PyObfuscate
+# git+https://github.com/QQuick/Opy/archive/master.zip  # Opy
